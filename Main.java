@@ -3,7 +3,6 @@ import java.util.ArrayList;
 public class Main {
 
    public static void main(String []args) {
-      System.out.println(parsedI);
 
       Integer fancyInt = new Integer(13);
       Double fancyDoub = new Double(4.00);
@@ -50,6 +49,30 @@ public class Main {
       System.out.println( toDo ); 
       // REMEMBER that indexes start at 0
       // so 1 means we added to the SECOND spot
+      // i was absent for class on thursday since I wen't home for my birthday but besides those notes I have them all completed
 
-   }
-}
+
+      // 4.9 ARRAYLIST TRAVERSAL
+      ArrayList<Integer> scores = new ArrayList<Integer>();
+      scores.add(95);
+      scores.add(93);
+      scores.add(92);
+      System.out.println(scores);
+
+      // ENHANCED FOR-EACH LOOP
+      // to "visit" every item in order
+      // does not keep track of current index/position
+      for ( Integer currentScore : scores ) {
+         System.out.println("Test Score: " + currentScore);
+      }
+      // typical example: count up all items
+      double sum = 0;
+      for ( Integer score : scores ) {
+         sum = sum + score; // OR sum += score;
+      }
+      double avg = sum / scores.size();
+      System.out.print(" Test Average: " + avg);
+
+
+   } // END MAIN METHOD
+} // END CLASS
